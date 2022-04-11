@@ -29,7 +29,11 @@ DEVICE_PACKAGE_OVERLAYS := \
 PRODUCT_COPY_FILES += \
 	device/samsung/j7xelte/conf/init.universal7870.rc:root/init.samsungexynos7870.rc \
 	device/samsung/j7xelte/conf/init.universal7870.usb.rc:root/init.samsungexynos7870.usb.rc \
-	device/samsung/j7xelte/conf/fstab.universal7870:root/fstab.samsungexynos7870
+	device/samsung/j7xelte/conf/fstab.universal7870:root/fstab.samsungexynos7870 \
+	device/samsung/j7xelte/conf/init.carrier.rc:root/init.carrier.rc \
+	device/samsung/j7xelte/conf/init.container.rc:root/init.container.rc \
+	device/samsung/j7xelte/conf/init.rilchip.rc:root/init.rilchip.rc \
+	device/samsung/j7xelte/conf/init.rilcommon.rc:root/init.rilcommon.rc
 
 PRODUCT_COPY_FILES += \
 	device/samsung/j7xelte/conf/ueventd.universal7870.rc:root/ueventd.samsungexynos7870.rc
