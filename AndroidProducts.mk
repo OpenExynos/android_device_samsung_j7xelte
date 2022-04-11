@@ -14,8 +14,8 @@
 # limitations under the License.
 #
 
-ifeq ($(TARGET_PRODUCT),full_smdk7570)
+ifeq ($(TARGET_PRODUCT),full_j7xelte)
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_smdk7570.mk \
-    $(LOCAL_DIR)/full_smdk7570.mk
+    $(LOCAL_DIR)/aosp_j7xelte.mk \
+    $(LOCAL_DIR)/full_j7xelte.mk
 endif

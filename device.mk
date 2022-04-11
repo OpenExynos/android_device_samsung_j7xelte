@@ -15,7 +15,7 @@
 #
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/samsung/smdk7570/kernel
+LOCAL_KERNEL := device/samsung/j7xelte/kernel
 else
 LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
@@ -23,16 +23,16 @@ endif
 include $(LOCAL_PATH)/BoardConfig.mk
 # These are for the multi-storage mount.
 DEVICE_PACKAGE_OVERLAYS := \
-	device/samsung/smdk7570/overlay
+	device/samsung/j7xelte/overlay
 
 # Init files
 PRODUCT_COPY_FILES += \
-	device/samsung/smdk7570/conf/init.smdk7570.rc:root/init.samsungexynos7570.rc \
-	device/samsung/smdk7570/conf/init.smdk7570.usb.rc:root/init.samsungexynos7570.usb.rc \
-	device/samsung/smdk7570/conf/fstab.smdk7570:root/fstab.samsungexynos7570
+	device/samsung/j7xelte/conf/init.universal7870.rc:root/init.samsungexynos7870.rc \
+	device/samsung/j7xelte/conf/init.universal7870.usb.rc:root/init.samsungexynos7870.usb.rc \
+	device/samsung/j7xelte/conf/fstab.universal7870:root/fstab.samsungexynos7870
 
 PRODUCT_COPY_FILES += \
-	device/samsung/smdk7570/conf/ueventd.smdk7570.rc:root/ueventd.samsungexynos7570.rc
+	device/samsung/j7xelte/conf/ueventd.universal7870.rc:root/ueventd.samsungexynos7870.rc
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
@@ -40,14 +40,15 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-	audio.primary.smdk7570 \
+	audio.primary.universal7870 \
 	audio.a2dp.default \
 	audio.usb.default \
 	audio.r_submix.default \
 
 PRODUCT_COPY_FILES += \
-	device/samsung/smdk7570/audio_policy.conf:system/etc/audio_policy.conf \
-	device/samsung/smdk7570/mixer_paths.xml:system/etc/mixer_paths.xml
+	device/samsung/j7xelte/audio_policy.conf:system/etc/audio_policy.conf \
+	device/samsung/j7xelte/mixer_paths.xml:system/etc/mixer_paths.xml \
+	device/samsung/j7xelte/mixer_paths_rev03.xml:system/etc/mixer_paths_rev03.xml
 
 
 # Libs
@@ -71,7 +72,7 @@ PRODUCT_PACKAGES += \
 
 # Power HAL
 PRODUCT_PACKAGES += \
-	power.smdk7570
+	power.universal7870
 
 # MobiCore setup
 #PRODUCT_PACKAGES += \
@@ -86,7 +87,7 @@ PRODUCT_PACKAGES += \
 
 #Gatekeeper
 #PRODUCT_PACKAGES += \
-       gatekeeper.exynos7570
+       gatekeeper.exynos7870
 
 # WideVine modules
 #PRODUCT_PACKAGES += \
@@ -111,19 +112,19 @@ PRODUCT_PACKAGES += \
 
 # Keymaster
 #PRODUCT_PACKAGES += \
-	keystore.exynos7570 \
+	keystore.exynos7870 \
 	tlkeymasterM
 
 PRODUCT_PACKAGES += \
-	camera.smdk7570
+	camera.universal7870
 
 # OpenMAX IL configuration files
 PRODUCT_COPY_FILES += \
 	frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
 	frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
-	device/samsung/smdk7570/media_profiles.xml:system/etc/media_profiles.xml \
-	device/samsung/smdk7570/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
-	device/samsung/smdk7570/media_codecs.xml:system/etc/media_codecs.xml
+	device/samsung/j7xelte/media_profiles.xml:system/etc/media_profiles.xml \
+	device/samsung/j7xelte/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
+	device/samsung/j7xelte/media_codecs.xml:system/etc/media_codecs.xml
 
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -134,9 +135,9 @@ PRODUCT_COPY_FILES += \
 
 # Copy FIMC-IS-FW
 PRODUCT_COPY_FILES += \
-       device/samsung/smdk7570/firmware/fimc_is_lib.bin:system/vendor/firmware/fimc_is_lib.bin \
-       device/samsung/smdk7570/firmware/setfile_3m2.bin:system/vendor/firmware/setfile_3m2.bin \
-       device/samsung/smdk7570/firmware/setfile_5e2.bin:system/vendor/firmware/setfile_5e2.bin \
+       device/samsung/j7xelte/firmware/fimc_is_lib.bin:system/vendor/firmware/fimc_is_lib.bin \
+       device/samsung/j7xelte/firmware/setfile_3l2.bin:system/vendor/firmware/setfile_3l2.bin \
+       device/samsung/j7xelte/firmware/setfile_5e3.bin:system/vendor/firmware/setfile_5e3.bin
 
 # Camera configuration files
 PRODUCT_COPY_FILES += \
@@ -146,7 +147,7 @@ PRODUCT_COPY_FILES += \
 # WLAN configuration
 # device specific wpa_supplicant.conf
 PRODUCT_COPY_FILES += \
-        device/samsung/smdk7570/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+        device/samsung/j7xelte/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 # Bluetooth configuration
 PRODUCT_COPY_FILES += \
@@ -157,7 +158,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PROPERTY_OVERRIDES := \
 	ro.opengles.version=196609 \
-	ro.sf.lcd_density=320 \
 	debug.hwc.otf=1 \
 	debug.hwc.winupdate=1 \
 	debug.hwc.nodirtyregion=1
@@ -195,7 +195,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_COPY_FILES += \
-       device/samsung/smdk7570/conf/init.rc:root/init.rc \
+       device/samsung/j7xelte/conf/init.rc:root/init.rc \
 
 MODEM_USE_ONECHIP := true
 MODEM_USE_GPT := true
@@ -203,6 +203,6 @@ MODEM_USE_GPT := true
 #MODEM_NOT_USE_FINAL_CMD := true
 
 $(call inherit-product, hardware/samsung_slsi/exynos5/exynos5.mk)
-$(call inherit-product-if-exists, vendor/samsung_slsi/exynos7570/exynos7570-vendor.mk)
-$(call inherit-product, hardware/samsung_slsi/exynos7570/exynos7570.mk)
-#$(call inherit-product, device/samsung/smdk7570/gnss_binaries/gnss_binaries.mk)
+$(call inherit-product-if-exists, vendor/samsung_slsi/exynos7870/exynos7870-vendor.mk)
+$(call inherit-product, hardware/samsung_slsi/exynos7870/exynos7870.mk)
+#$(call inherit-product, device/samsung/j7xelte/gnss_binaries/gnss_binaries.mk)

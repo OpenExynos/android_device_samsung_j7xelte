@@ -1,3 +1,3 @@
 #!/bin/bash
 
-PRODUCT_BOARD=smdk7570
+PRODUCT_BOARD=universal7870

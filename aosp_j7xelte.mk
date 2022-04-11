@@ -14,9 +14,9 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/samsung/smdk7570/full_smdk7570.mk)
+$(call inherit-product, device/samsung/j7xelte/full_j7xelte.mk)
 
-PRODUCT_NAME := aosp_smdk7570
+PRODUCT_NAME := aosp_j7xelte
 
 PRODUCT_PACKAGES += \
     Launcher3

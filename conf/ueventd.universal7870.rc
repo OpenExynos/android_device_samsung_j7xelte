@@ -58,6 +58,8 @@
 /dev/i2c-2                0660   system     system
 /dev/HPD                  0660   system     system
 
+# NFC
+/dev/sec-nfc              0660   nfc        nfc
 # mfc
 /dev/video6               0660   media      media
 /dev/video7               0660   media      media
@@ -87,9 +89,6 @@
 /dev/video151             0660   media      media
 /dev/video152             0660   media      media
 /dev/video160             0660   media      media
-/dev/video161             0660   media      media
-/dev/video170             0660   media      media
-/dev/video180             0660   media      media
 /dev/media2               0660   media      media
 
 # hevc
@@ -112,11 +111,36 @@
 /dev/umts_dm0             0660   radio      radio
 /dev/umts_router          0660   radio      radio
 
-# SIPC RIL
-/dev/umts_boot0           0660   radio      radio
-/dev/umts_ipc0            0660   radio      radio
-# /dev/umts_ipc1            0660   radio      radio
-/dev/umts_rfs0            0660   radio      radio
+# Modem Interface
+/dev/block/platform/13540000.dwmmc0/by-name/RADIO	0660	system	radio
+/dev/umts*		  0660	system	radio
+/dev/umts_csd		  0660	system	loop_radio
 
-# SCSC Bluetooth
-/dev/scsc_h4_0            0660   bluetooth  bluetooth
+# FM Radio
+/dev/radio0               0660   system     audio
+
+# Google FRP solution
+/dev/block/platform/13540000.dwmmc0/by-name/PERSISTENT    0660    system    system
+
+# Reactivation Lock solution
+/dev/block/platform/13540000.dwmmc0/by-name/STEADY    0660    system    system
+
+# MobiCore
+/dev/mobicore             0700   system     system
+/dev/mobicore-user        0666   radio     	system
+
+# interactive governor parameters
+/sys/devices/system/cpu/cpu*   cpufreq/interactive/timer_rate                  0660    system  system
+/sys/devices/system/cpu/cpu*   cpufreq/interactive/timer_slack                 0660    system  system
+/sys/devices/system/cpu/cpu*   cpufreq/interactive/min_sample_time             0660    system  system
+/sys/devices/system/cpu/cpu*   cpufreq/interactive/hispeed_freq                0660    system  system
+/sys/devices/system/cpu/cpu*   cpufreq/interactive/target_loads                0660    system  system
+/sys/devices/system/cpu/cpu*   cpufreq/interactive/go_hispeed_load             0660    system  system
+/sys/devices/system/cpu/cpu*   cpufreq/interactive/above_hispeed_delay         0660    system  system
+/sys/devices/system/cpu/cpu*   cpufreq/interactive/boost                       0660    system  system
+/sys/devices/system/cpu/cpu*   cpufreq/interactive/boostpulse                  0200    system  system
+/sys/devices/system/cpu/cpu*   cpufreq/interactive/input_boost                 0660    system  system
+/sys/devices/system/cpu/cpu*   cpufreq/interactive/boostpulse_duration         0660    system  system
+/sys/devices/system/cpu/cpu*   cpufreq/interactive/io_is_busy                  0660    system  system
+# Secure MEM driver
+/dev/s5p-smem             0660   system     system

@@ -16,10 +16,10 @@
 
 TARGET_LINUX_KERNEL_VERSION := 3.18
 
-TARGET_BOARD_INFO_FILE := device/samsung/smdk7570/board-info.txt
+TARGET_BOARD_INFO_FILE := device/samsung/j7xelte/board-info.txt
 
 # HACK : To fix up after bring up multimedia devices.
-TARGET_SOC := exynos7570
+TARGET_SOC := exynos7870
 
 # pure 32-bit platform build
 TARGET_PLATFORM_32BIT := true
@@ -49,7 +49,7 @@ TARGET_NO_BOOTLOADER := true
 TARGET_NO_KERNEL := true
 TARGET_NO_RADIOIMAGE := true
 TARGET_BOARD_PLATFORM := exynos5
-TARGET_BOOTLOADER_BOARD_NAME := smdk7570
+TARGET_BOOTLOADER_BOARD_NAME := universal7870
 TARGET_AP_VER := evt1
 
 # bionic libc options
@@ -63,7 +63,7 @@ BOARD_SMDK_COMMON_MODULES := liblight
 USE_OPENGL_RENDERER := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 
-BOARD_EGL_CFG := device/samsung/smdk7570/conf/egl.cfg
+BOARD_EGL_CFG := device/samsung/j7xelte/conf/egl.cfg
 
 # Storage options
 BOARD_USES_SDMMC_BOOT := false
@@ -132,8 +132,8 @@ ADDITIONAL_BUILD_PROPERTIES += dalvik.vm.dex2oat-filter=speed
 # CAMERA
 BOARD_BACK_CAMERA_ROTATION := 90
 BOARD_FRONT_CAMERA_ROTATION := 90
-BOARD_BACK_CAMERA_SENSOR := SENSOR_NAME_S5K3M2
-BOARD_FRONT_CAMERA_SENSOR := SENSOR_NAME_S5K5E2
+BOARD_BACK_CAMERA_SENSOR := SENSOR_NAME_S5K3L2
+BOARD_FRONT_CAMERA_SENSOR := SENSOR_NAME_S5K5E3
 
 # V8
 BOARD_EXYNOS_V8_OPT := true
@@ -200,4 +200,4 @@ TARGET_USES_UNIVERSAL_LIBHWJPEG := true
 BOARD_USES_CURL := true
 
 # SELinux Policy DIR
-BOARD_SEPOLICY_DIRS = device/samsung/smdk7570/sepolicy
+BOARD_SEPOLICY_DIRS = device/samsung/j7xelte/sepolicy

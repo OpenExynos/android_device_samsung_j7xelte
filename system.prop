@@ -1,9 +1,11 @@
 #
-# system.prop for smdk7570
+# system.prop for universal7870
 #
 
-ro.arch=exynos7570
-#ro.kernel.qemu=1
-#ro.kernel.qemu.gles=1
+ro.sf.lcd_density=320
+
+ro.arch=exynos7870
+ro.kernel.qemu=0
+ro.kernel.qemu.gles=1
 persist.demo.hdmirotationlock=false
 

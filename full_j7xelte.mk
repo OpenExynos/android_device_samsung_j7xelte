@@ -14,11 +14,11 @@
 
 #
 # This file is the build configuration for a full Android
-# build for smdk7570 hardware. This cleanly combines a set of
+# build for j7xelte hardware. This cleanly combines a set of
 # device-specific aspects (drivers) with a device-agnostic
 # product configuration (apps). Except for a few implementation
 # details, it only fundamentally contains two inherit-product
-# lines, full and smdk7570, hence its name.
+# lines, full and j7xelte, hence its name.
 #
 
 # Live Wallpapers
@@ -38,15 +38,15 @@ PRODUCT_PROPERTY_OVERRIDES := \
         net.dns2=8.8.4.4
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, device/samsung/smdk7570/device.mk)
+$(call inherit-product, device/samsung/j7xelte/device.mk)
 ifneq ($(TARGET_PLATFORM_32BIT), true)
 $(call inherit-product, build/target/product/aosp_arm64.mk)
 else
 $(call inherit-product, build/target/product/aosp_arm.mk)
 endif
 
-PRODUCT_NAME := full_smdk7570
-PRODUCT_DEVICE := smdk7570
-PRODUCT_BRAND := Android
-PRODUCT_MODEL := Full Android on SMDK7570
-PRODUCT_MANUFACTURER := Samsung Electronics Co., Ltd.
+PRODUCT_NAME := j7xeltexx
+PRODUCT_DEVICE := j7xelte
+PRODUCT_BRAND := samsung
+PRODUCT_MODEL := SM-J710F
+PRODUCT_MANUFACTURER := samsung
