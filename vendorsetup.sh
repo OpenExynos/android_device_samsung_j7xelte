@@ -14,6 +14,6 @@
 # limitations under the License.
 #
 
-add_lunch_combo full_j7xelte-user
-add_lunch_combo full_j7xelte-userdebug
-add_lunch_combo full_j7xelte-eng
+add_lunch_combo j7xeltexx-user
+add_lunch_combo j7xeltexx-userdebug
+add_lunch_combo j7xeltexx-eng

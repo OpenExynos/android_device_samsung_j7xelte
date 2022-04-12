@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/samsung/j7xelte/full_j7xelte.mk)
+$(call inherit-product, device/samsung/j7xelte/j7xeltexx.mk)
 
 PRODUCT_NAME := aosp_j7xelte
 

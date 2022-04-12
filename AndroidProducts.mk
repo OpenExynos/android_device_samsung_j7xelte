@@ -14,8 +14,8 @@
 # limitations under the License.
 #
 
-ifeq ($(TARGET_PRODUCT),full_j7xelte)
+ifeq ($(TARGET_PRODUCT),j7xeltexx)
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_j7xelte.mk \
-    $(LOCAL_DIR)/full_j7xelte.mk
+    $(LOCAL_DIR)/j7xeltexx.mk
 endif
