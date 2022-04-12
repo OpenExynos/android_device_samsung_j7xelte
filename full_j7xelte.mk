@@ -45,7 +45,7 @@ else
 $(call inherit-product, build/target/product/aosp_arm.mk)
 endif
 
-PRODUCT_NAME := j7xeltexx
+PRODUCT_NAME := full_j7xelte
 PRODUCT_DEVICE := j7xelte
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-J710F
