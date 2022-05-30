@@ -15,6 +15,7 @@
 #
 
 TARGET_LINUX_KERNEL_VERSION := 3.18
+TARGET_BOARD_KERNEL_HEADERS := hardware/samsung_slsi/exynos/kernel-3.18-headers
 
 TARGET_BOARD_INFO_FILE := device/samsung/j7xelte/board-info.txt
 
